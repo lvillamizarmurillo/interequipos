@@ -24,7 +24,6 @@ const loadModuleRouter = async (version, nameFile) => {
     const nameFileClean = cleanName(nameFile);
     if (nameFileClean !== 'index') {
         try {
-            console.log(`./V${version.split('.')[0]}/${nameFile}`);
             const moduleRouter = await import(`./V${version.split('.')[0]}/${nameFile}`);
             if (moduleRouter.router) {
                 router.use(`/${nameFileClean}`, moduleRouter.router);
