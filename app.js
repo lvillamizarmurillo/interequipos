@@ -3,6 +3,7 @@ import { loadEnv } from 'vite';
 import cors from 'cors';
 import LimitPetitions from './api/config/rateLimit.js';
 import routerDynamic from './api/routers/index.js';
+import { validate } from './api/validations/validations.js';
 
 const env = loadEnv('development', process.cwd(), 'VITE');
 
@@ -17,7 +18,6 @@ const corsOptions = {
 
 const app = express();
 
-// Middleware
 app
   .use(LimitPetitions.limitAllPetitions())
   .use(cors(corsOptions))
@@ -27,10 +27,9 @@ app
     console.log(`http://${config.hostname}:${config.port}`);
   });
 
-// Dynamic Router Handler
 async function dynamicRouterHandler(req, res, next) {
   try {
-    const dynamicRouter = await routerDynamic(req.header('Accept-version'));
+    const dynamicRouter = validate(await routerDynamic(req.header('Accept-version')));
     dynamicRouter(req, res, next);
   } catch (error) {
     res.status(400).send({ status: 405, message: 'Ingrese en los headers la versión a utilizar para el API' });
