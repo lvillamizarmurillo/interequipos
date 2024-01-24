@@ -1,4 +1,4 @@
-import Navegadora from '../Global.jsx';
+import {Navegadora, FinalPage} from '../Global.jsx';
 import React, { useState, useEffect } from 'react';
 import imagenCarrusel1 from '../../assets/articulosOficina.jpg'
 import imagenCarrusel2 from '../../assets/puntosPago.jpg'
@@ -97,6 +97,7 @@ function Home() {
             <button onClick={()=> {handleButtonClickText('Satisfacer las necesidades de cada cliente. Proveer productos y servicios a nivel nacional e internacional. Transmitir nuestros valores y compromiso a través de nuestro servicio.Generar una relación sólida con cada uno de nuestros clientes, fabricantes, empleados y proveedores, garantizando una permanencia competitiva y rentabilidad justa'), handleButtonClickTitle('Objetivos')}} className='flex mx-1 w-3 bg-white items-center h-2/6 rounded-full border border-solid border-gray-400 transition-all duration-300 transform hover:bg-slate-400'></button>
         </div>
       </div>
+      <FinalPage />
     </>
   );
 }

@@ -5,6 +5,14 @@ import menu from '../assets/menu.png'
 import twitter from '../assets/twitter.png'
 import instagram from '../assets/instagram.png'
 import facebook from '../assets/facebook.png'
+import whatsappBlanco from '../assets/whatsappBlanco.png'
+import twitterCalidadBlanco from '../assets/twitterCalidadBlanco.png'
+import instagramCalidadBlanco from '../assets/instagramCalidadBlanco.png'
+import facebookCalidadBlanco from '../assets/facebookCalidadBlanco.png'
+import whatsappCalidadBlanco from '../assets/whatsappCalidadBlanco.png'
+import celular from '../assets/celular.png'
+import correo from '../assets/correo.png'
+import ubicacion from '../assets/ubicacion.png'
 import React, { useState } from 'react';
 
 
@@ -59,4 +67,42 @@ function Navegadora() {
     )
 }
 
-export default Navegadora;
+function FinalPage() {
+
+    return (
+        <>
+            <div className="flex flex-col md:flex-row w-full bg-blue-900">
+                <div className="flex flex-col m-2 w-full md:2/6 h-68">
+                    <p className="flex w-full h-10 items-center text-white text-xl border-b border-white">Comunicate con nosotros</p>
+                    <p className="flex mt-4 m-2 text-white"><img src={celular} className='flex w-7 h-7' alt="celular" /> 313 4757734</p>
+                    <p className="flex m-2 text-white"><img src={whatsappBlanco} className='flex w-7 h-7' alt="celular" /> 313 4757734</p>
+                    <p className="flex m-2 text-white"><img src={whatsappBlanco} className='flex w-7 h-7' alt="celular" /> 316 4933049</p>
+                    <p className="flex m-2 text-white"><img src={ubicacion} className='flex w-7 h-7' alt="celular" /> Gratamira Call33#49-12</p>
+                    <p className="flex m-2 text-white"><img src={correo} className='flex w-7 h-7' alt="celular" /> lvillamizarmurillo@gmail.com</p>
+                </div>
+                <div className="flex flex-col m-2 w-full md:2/6 h-64">
+                    <p className="flex w-full h-10 items-center text-white text-xl border-b border-white">Busca tu equipo</p>
+                    <a href="#" className='flex ml-4 my-2 mt-4'><p className='flex text-white transition-all duration-300 transform hover:text-slate-500'>Monitores</p></a>
+                    <a href="#" className='flex ml-4 my-2'><p className='flex text-white transition-all duration-300 transform hover:text-slate-500'>Camaras</p></a>
+                    <a href="#" className='flex ml-4 my-2'><p className='flex text-white transition-all duration-300 transform hover:text-slate-500'>Sellos</p></a>
+                    <a href="#" className='flex ml-4 my-2'><p className='flex text-white transition-all duration-300 transform hover:text-slate-500'>Oficina</p></a>
+                    <a href="#" className='flex ml-4 my-2'><p className='flex text-white transition-all duration-300 transform hover:text-slate-500'>Contadores</p></a>
+                </div>
+                <div className="flex flex-col m-2 w-full md:2/6 h-64">
+                    <p className="flex w-full h-10 items-center text-white text-xl border-b border-white">Redes sociales</p>
+                    <div className="flex w-full h-48">
+                        <div className="flex w-1/4 items-center justify-center"><a href="#"><img src={facebookCalidadBlanco} alt="whatsappCalidadBlanco" className='w-20 h-20 transition-all duration-300 transform hover:scale-105' /></a></div>
+                        <div className="flex w-1/4 items-center justify-center"><a href="#"><img src={whatsappCalidadBlanco} alt="whatsappCalidadBlanco" className='w-20 h-20 transition-all duration-300 transform hover:scale-105' /></a></div>
+                        <div className="flex w-1/4 items-center justify-center"><a href="#"><img src={instagramCalidadBlanco} alt="whatsappCalidadBlanco" className='w-20 h-20 transition-all duration-300 transform hover:scale-105' /></a></div>
+                        <div className="flex w-1/4 items-center justify-center"><a href="#"><img src={twitterCalidadBlanco} alt="whatsappCalidadBlanco" className='w-20 h-20 transition-all duration-300 transform hover:scale-105' /></a></div>
+                    </div>
+                </div>
+            </div>
+        </>
+    )
+}
+
+export {
+    Navegadora,
+    FinalPage
+};
