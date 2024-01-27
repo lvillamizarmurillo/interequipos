@@ -25,17 +25,17 @@ function Navegadora() {
     };
     return (
         <>
-            <div className="flex flex-wrap w-5/5 h-34 bg-blue-900 sm:h-20">
-                <div className='flex w-10/12 justify-center sm:w-3/12 sm:h-full  sm:order-1 h-20 order-1'>
+            <div className="flex flex-wrap w-5/5 h-34 bg-blue-950 md:h-20">
+                <div className='flex w-10/12 justify-center md:w-3/12 md:h-full  md:order-1 h-20 order-1'>
                     <a href="#"><img className='flex w-full h-full m-auto transition-all duration-300 transform hover:scale-105' src={logo} alt="logo" /></a>
                 </div>
-                <div className="flex w-full sm:w-8/12 sm:h-full  sm:order-2 h-12 order-3">
-                    <div className="flex m-auto  w-10/12 h-3/5 sm:w-full sm:h-2/5">
+                <div className="flex w-full md:w-8/12 md:h-full  md:order-2 h-12 order-3">
+                    <div className="flex m-auto  w-10/12 h-3/5 md:w-full md:h-2/5">
                         <input placeholder='Buscar producto' type="text" className='flex outline-none w-11/12 p-3 rounded-l-lg transition-all duration-300 transform hover:bg-gray-200' />
-                        <button className='flex w-1/12 rounded-r-lg bg-lime-400 transition-all duration-300 transform hover:bg-lime-600  items-center justify-center'><img src={lupa} alt="lupa" className='flex w-8/12 sm:w-4/12' /></button>
+                        <button className='flex w-1/12 rounded-r-lg bg-lime-400 transition-all duration-300 transform hover:bg-lime-600  items-center justify-center'><img src={lupa} alt="lupa" className='flex w-8/12 md:w-4/12' /></button>
                     </div>
                 </div>
-                <div className="flex w-2/12 sm:w-1/12 sm:h-full  sm:order-3 h-20 order-2">
+                <div className="flex w-2/12 md:w-1/12 md:h-full  md:order-3 h-20 order-2">
                     <button className='flex w-8/12 h-16 m-auto justify-center transition-all duration-300 transform hover:scale-105'><img src={carro} alt="carro" className='flex h-full' /></button>
                 </div>
             </div>
@@ -71,7 +71,7 @@ function FinalPage() {
 
     return (
         <>
-            <div className="flex flex-col md:flex-row w-full bg-blue-900">
+            <div className="flex flex-col md:flex-row w-full bg-blue-950">
                 <div className="flex flex-col m-2 w-full md:2/6 h-68">
                     <p className="flex w-full h-10 items-center text-white text-xl border-b border-white">Comunicate con nosotros</p>
                     <p className="flex mt-4 m-2 text-white"><img src={celular} className='flex w-7 h-7' alt="celular" /> 313 4757734</p>
@@ -102,7 +102,26 @@ function FinalPage() {
     )
 }
 
+function CategoriaNav() {
+
+    return (
+        <>
+            <div className="flex absolute z-40 w-4/12 md:relative md:flex flex-col md:w-full h-full bg-slate-200">
+                <div className="flex flex-col w-full">
+                    <a href="#" className="flex h-14 border-b-2 mx-2 border-stone-300 items-center transition duration-300 transform hover:scale-105 hover:bg-stone-300"><p className="text-stone-400 ml-3">Camaras</p></a>
+                    <a href="#" className="flex h-14 border-b-2 mx-2 border-stone-300 items-center transition duration-300 transform hover:scale-105 hover:bg-stone-300"><p className="text-stone-400 ml-3">Camaras</p></a>
+                    <a href="#" className="flex h-14 border-b-2 mx-2 border-stone-300 items-center transition duration-300 transform hover:scale-105 hover:bg-stone-300"><p className="text-stone-400 ml-3">Camaras</p></a>
+                    <a href="#" className="flex h-14 border-b-2 mx-2 border-stone-300 items-center transition duration-300 transform hover:scale-105 hover:bg-stone-300"><p className="text-stone-400 ml-3">Camaras</p></a>
+                    <a href="#" className="flex h-14 border-b-2 mx-2 border-stone-300 items-center transition duration-300 transform hover:scale-105 hover:bg-stone-300"><p className="text-stone-400 ml-3">Camaras</p></a>
+                    <a href="#" className="flex h-14 border-b-2 mx-2 border-stone-300 items-center transition duration-300 transform hover:scale-105 hover:bg-stone-300"><p className="text-stone-400 ml-3">Camaras</p></a>
+                </div>
+            </div>
+        </>
+    )
+}
+
 export {
     Navegadora,
-    FinalPage
+    FinalPage,
+    CategoriaNav
 };
