@@ -17,14 +17,10 @@ db.admin.insertMany([
 use('intereqiposdb');
 db.category.insertMany([
   {
-    name: 'OFICINA',
-    path: "ruta/del/archivo/en/el/servidor/uploads/1234567890-nombre_del_archivo1.jpg",
-    link: "http://tu-subdominio.com/uploads/1234567890-nombre_del_archivo1.jpg"
+    name: 'OFICINA'
   },
   {
-    name: 'SELLOS',
-    path: "ruta/del/archivo/en/el/servidor/uploads/1234567890-nombre_del_archivo2.jpg",
-    link: "http://tu-subdominio.com/uploads/1234567890-nombre_del_archivo2.jpg"
+    name: 'SELLOS'
   }
 ]);
 
@@ -33,16 +29,10 @@ db.product.insertMany([
   {
     name: 'engrapadora',
     category: 'OFICINA',
-    images: [
-      {
-        path: 'ruta/del/archivo/en/el/servidor/uploads/1234567890-nombre_del_archivo1.jpg',
-        link: 'http://tu-subdominio.com/uploads/1234567890-nombre_del_archivo1.jpg',
-      },
-      {
-        path: 'ruta/del/archivo/en/el/servidor/uploads/1234567890-nombre_del_archivo2.jpg',
-        link: 'http://tu-subdominio.com/uploads/1234567890-nombre_del_archivo2.jpg',
-      }
-    ],
+    image: {
+      path: 'ruta/del/archivo/en/el/servidor/uploads/1234567890-nombre_del_archivo1.jpg',
+      link: 'http://tu-subdominio.com/uploads/1234567890-nombre_del_archivo1.jpg',
+    },
     productPdf: {
       path: "ruta/del/archivo/en/el/servidor/uploads/1234567890-documento_ejemplo.pdf",
       link: "http://tu-subdominio.com/uploads/1234567890-documento_ejemplo.pdf"
@@ -53,16 +43,10 @@ db.product.insertMany([
   {
     name: 'engrapadora',
     category: 'SELLOS',
-    images: [
-      {
-        path: 'ruta/del/archivo/en/el/servidor/uploads/1234567890-nombre_del_archivo1.jpg',
-        link: 'http://tu-subdominio.com/uploads/1234567890-nombre_del_archivo1.jpg',
-      },
-      {
-        path: 'ruta/del/archivo/en/el/servidor/uploads/1234567890-nombre_del_archivo2.jpg',
-        link: 'http://tu-subdominio.com/uploads/1234567890-nombre_del_archivo2.jpg',
-      }
-    ],
+    image: {
+      path: 'ruta/del/archivo/en/el/servidor/uploads/1234567890-nombre_del_archivo2.jpg',
+      link: 'http://tu-subdominio.com/uploads/1234567890-nombre_del_archivo2.jpg',
+    },
     productPdf: {
       path: "ruta/del/archivo/en/el/servidor/uploads/1234567890-documento_ejemplo.pdf",
       link: "http://tu-subdominio.com/uploads/1234567890-documento_ejemplo.pdf"
@@ -73,16 +57,10 @@ db.product.insertMany([
   {
     name: 'engrapadora',
     category: 'OFICINA',
-    images: [
-      {
-        path: 'ruta/del/archivo/en/el/servidor/uploads/1234567890-nombre_del_archivo1.jpg',
-        link: 'http://tu-subdominio.com/uploads/1234567890-nombre_del_archivo1.jpg',
-      },
-      {
-        path: 'ruta/del/archivo/en/el/servidor/uploads/1234567890-nombre_del_archivo2.jpg',
-        link: 'http://tu-subdominio.com/uploads/1234567890-nombre_del_archivo2.jpg',
-      }
-    ],
+    image: {
+      path: 'ruta/del/archivo/en/el/servidor/uploads/1234567890-nombre_del_archivo3.jpg',
+      link: 'http://tu-subdominio.com/uploads/1234567890-nombre_del_archivo3.jpg',
+    },
     productPdf: {
       path: "ruta/del/archivo/en/el/servidor/uploads/1234567890-documento_ejemplo.pdf",
       link: "http://tu-subdominio.com/uploads/1234567890-documento_ejemplo.pdf"
@@ -97,9 +75,10 @@ db.contact.insertMany([
   {
     socialNetworks: {
       facebook: 'https://facebook.com/',
-      twitter: 'https://twitter.com/',
+      whatsapp: 'https://twitter.com/',
       instagram: 'https://instagram.com/',
-      whatsapp: '3164933049'
+      whatsapp1: '3164933049',
+      whatsapp2: '3134757734'
     }
   }
 ]);
@@ -109,12 +88,6 @@ db.zones.insertMany([
   {
     zone: {
       Bucaramanga: {
-        emailsContacts: {
-          oficina: 'interequipo@gmail.com',
-          soporte: 'soporte@gmail.com',
-          gerencia: 'gerencia@gmail.com'
-        },
-        numberContact: ['3134757734','3134757734'],
         address: ['Cr. 27 # 36-38 - Int 121, Bucaramanga / Santander','La cumbre'],
       }
     }
@@ -122,10 +95,6 @@ db.zones.insertMany([
   {
     zone: {
       Cali: {
-        emailsContacts: {
-          oficina: 'interequipocali@gmail.com'
-        },
-        numberContact: ['3164933049','3134757734'],
         address: ['Cr. 27 # 36-38 - Int 121, Cali / Santander'],
       }
     }

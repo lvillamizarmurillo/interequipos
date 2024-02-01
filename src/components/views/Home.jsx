@@ -33,7 +33,7 @@ function Home() {
     setIsTransitioning(true);
     const timeoutId = setTimeout(() => {
       setIsTransitioning(false);
-    }, 300); // Ajusta la duración de la transición
+    }, 300); 
     return () => clearTimeout(timeoutId);
   }, [currentIndex]);
 

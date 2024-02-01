@@ -120,8 +120,174 @@ function CategoriaNav() {
     )
 }
 
+function CambiarInfo() {
+    return (
+        <>
+            <form className="flex flex-col w-full gap-5 bg-gray-950 p-8 border border-gray-800 rounded-lg text-white text-center text-2xl">
+                <div className="font-bold">Cambiar información de la página</div>
+                <input
+                    type="text"
+                    className="h-10 outline-none border-2 border-lime-600 bg-transparent px-4 py-2 rounded-md transition-colors duration-500 text-slate-300 text-lg focus:bg-gray-800"
+                    placeholder="Link para redireccionar a Facebook"
+                />
+                <input
+                    type="text"
+                    className="h-10 outline-none border-2 border-lime-600 bg-transparent px-4 py-2 rounded-md transition-colors duration-500 text-slate-300 text-lg focus:bg-gray-800"
+                    placeholder="Link para redireccionar al WhatsApp"
+                />
+                <input
+                    type="text"
+                    className="h-10 outline-none border-2 border-lime-600 bg-transparent px-4 py-2 rounded-md transition-colors duration-500 text-slate-300 text-lg focus:bg-gray-800"
+                    placeholder="Link para redireccionar a Instagram"
+                />
+                <input
+                    type="text"
+                    className="h-10 outline-none border-2 border-lime-600 bg-transparent px-4 py-2 rounded-md transition-colors duration-500 text-slate-300 text-lg focus:bg-gray-800"
+                    placeholder="Correo de Interequipos"
+                />
+                <input
+                    type="text"
+                    className="h-10 outline-none border-2 border-lime-600 bg-transparent px-4 py-2 rounded-md transition-colors duration-500 text-slate-300 text-lg focus:bg-gray-800"
+                    placeholder="Número del encargado principal"
+                />
+                <input
+                    type="text"
+                    className="h-10 outline-none border-2 border-lime-600 bg-transparent px-4 py-2 rounded-md transition-colors duration-500 text-slate-300 text-lg focus:bg-gray-800"
+                    placeholder="Número de soporte"
+                />
+                <button
+                    className="w-2/6 mx-auto text-white transition-colors duration-500 text-lg outline-none border-none h-12 rounded-md bg-lime-500 self-end hover:bg-lime-600"
+                >
+                    Enviar
+                </button>
+            </form>
+        </>
+    )
+}
+
+
+function AgregarCategoria() {
+
+    return (
+        <>
+            <form className="flex flex-col w-full mt-16 h-96 gap-10 bg-gray-950 p-8 border border-gray-950 rounded-lg text-white text-center text-2xl">
+                <div className="font-bold mb-4">Agregar una Categoria nueva</div>
+                <input
+                    type="text"
+                    className="h-10 outline-none border-2 border-lime-600 bg-transparent px-4 py-2 rounded-md transition-colors duration-500 text-slate-300 text-lg focus:bg-gray-800"
+                    placeholder="Digite el nombre de la categoria para agregar productos a esta"
+                />
+                <button
+                    className="w-2/6 mx-auto text-white transition-colors duration-500 text-lg outline-none border-none h-12 rounded-md bg-lime-500 self-end hover:bg-lime-600"
+                >
+                    Agregar
+                </button>
+            </form>
+        </>
+    )
+}
+
+
+function AgregarProducto() {
+
+    return (
+        <>
+            <form className="flex flex-col w-full gap-10 bg-gray-950 p-8 border border-gray-950 rounded-lg text-white text-center text-2xl">
+                <div className="font-bold mb-4">Agregar un Producto nuevo</div>
+                <input
+                    type="text"
+                    className="h-10 outline-none border-2 border-lime-600 bg-transparent px-4 py-2 rounded-md transition-colors duration-500 text-slate-300 text-lg focus:bg-gray-800"
+                    placeholder="Digite el nombre completo del producto"
+                />
+                <input
+                    type="text"
+                    className="h-10 outline-none border-2 border-lime-600 bg-transparent px-4 py-2 rounded-md transition-colors duration-500 text-slate-300 text-lg focus:bg-gray-800"
+                    placeholder="Digite el nombre de la categoria para asociar productos a la categoria"
+                />
+                <input
+                    type="text"
+                    className="h-10 outline-none border-2 border-lime-600 bg-transparent px-4 py-2 rounded-md transition-colors duration-500 text-slate-300 text-lg focus:bg-gray-800"
+                    placeholder="Agregue una imagen del producto"
+                />
+                <input
+                    type="text"
+                    className="h-10 outline-none border-2 border-lime-600 bg-transparent px-4 py-2 rounded-md transition-colors duration-500 text-slate-300 text-lg focus:bg-gray-800"
+                    placeholder="Agregue el pdf del producto"
+                />
+                <input
+                    type="text"
+                    className="h-10 outline-none border-2 border-lime-600 bg-transparent px-4 py-2 rounded-md transition-colors duration-500 text-slate-300 text-lg focus:bg-gray-800"
+                    placeholder="Digite la informacion detallada y especificaciones del producto"
+                />
+                <input
+                    type="text"
+                    className="h-10 outline-none border-2 border-lime-600 bg-transparent px-4 py-2 rounded-md transition-colors duration-500 text-slate-300 text-lg focus:bg-gray-800"
+                    placeholder="Agregue la zona a la que se asocia el producto"
+                />
+                <button
+                    className="w-2/6 mx-auto text-white transition-colors duration-500 text-lg outline-none border-none h-12 rounded-md bg-lime-500 self-end hover:bg-lime-600"
+                >
+                    Agregar
+                </button>
+            </form>
+        </>
+    )
+}
+
+
+function EliminarCategoria() {
+
+    return (
+        <>
+            <form className="flex flex-col w-full mt-1 pb-12 gap-10 bg-gray-950 p-8 border border-gray-950 rounded-lg text-white text-center text-2xl">
+                <div className="font-bold mb-4">Agregar una Categoria nueva</div>
+                <input
+                    type="text"
+                    className="h-10 outline-none border-2 border-lime-600 bg-transparent px-4 py-2 rounded-md transition-colors duration-500 text-slate-300 text-lg focus:bg-gray-800"
+                    placeholder="Digite el nombre de la categoria a eliminar"
+                />
+                <div className="font-bold text-base mr-48">Advertencia: Asegurese de verificar bien el nombre</div>
+                <div className="font-bold text-base mr-3">Advertencia: esto eliminara todos los productos asociados a esta categoria</div>
+                <button
+                    className="w-2/6 mx-auto text-white transition-colors duration-500 text-lg outline-none border-none h-12 rounded-md bg-lime-500 self-end hover:bg-lime-600"
+                >
+                    Eliminar
+                </button>
+            </form>
+        </>
+    )
+}
+
+
+function EliminarProducto() {
+
+    return (
+        <>
+            <form className="flex flex-col w-full mt-1 pb-28 gap-10 bg-gray-950 p-8 border border-gray-950 rounded-lg text-white text-center text-2xl">
+                <div className="font-bold mb-4">Agregar una Categoria nueva</div>
+                <input
+                    type="text"
+                    className="h-10 outline-none border-2 border-lime-600 bg-transparent px-4 py-2 rounded-md transition-colors duration-500 text-slate-300 text-lg focus:bg-gray-800"
+                    placeholder="Digite el nombre del producto a eliminar"
+                />
+                <div className="font-bold text-base">Advertencia: Asegurese de verificar bien el nombre</div>
+                <button
+                    className="w-2/6 mx-auto text-white transition-colors duration-500 text-lg outline-none border-none h-12 rounded-md bg-lime-500 self-end hover:bg-lime-600"
+                >
+                    Eliminar
+                </button>
+            </form>
+        </>
+    )
+}
+
 export {
     Navegadora,
     FinalPage,
-    CategoriaNav
+    CategoriaNav,
+    CambiarInfo,
+    AgregarCategoria,
+    AgregarProducto,
+    EliminarCategoria,
+    EliminarProducto
 };
