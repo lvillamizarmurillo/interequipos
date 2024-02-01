@@ -9,11 +9,11 @@ function Equipment(){
         <>
             <Navegadora />
             
-            <div className="flex my-5 flex-wrap w-full mb-8 border border-blue-600">
-                <div className="flex w-full md:w-4/12">
+            <div className="flex px-0 my-5 flex-wrap w-full mb-8 border border-blue-600">
+                <div className="flex w-full md:w-5/12">
                     <img src={pruebaImagen} alt="" className="flex px-20 w-full" />
                 </div>
-                <div className="flex flex-col w-full md:w-5/12">
+                <div className="flex flex-col w-full md:w-4/12">
                     <div className="flex w-full h-24">
                         <p className="flex mt-3 mx-2 text-blue-900">Titulo del mejor pc que hay y aparte es un ejemplo de un modelo en especifico y cuesta llenarlo</p>
                     </div>
@@ -28,7 +28,7 @@ function Equipment(){
                     <div className="flex w-full md:h-2/6"><img src={logoAzul} alt="" className="flex w-full md:w-auto" /></div>
                     <div className="flex flex-col items-center justify-center w-full h-4/6">
                         <button className="flex justify-center w-11/12 mb-4 h-8 rounded bg-blue-950 transition duration-300 hover:scale-105 hover:bg-blue-800"><p className="flex items-center text-white"><img src={carro} className="flex w-8 mx-2" alt="carro" />Agregar al carrito</p></button>
-                        <a href="#" className="flex w-11/12 h-8 mb-2 justify-center rounded bg-blue-950 transition duration-300 hover:scale-105 hover:bg-blue-800"><p className="flex items-center text-white">Cotizar</p></a>
+                        <a href="https://wa.me/message/4IHEOLNB2UWSE1" target="_blank" className="flex w-11/12 h-8 mb-2 justify-center rounded bg-blue-950 transition duration-300 hover:scale-105 hover:bg-blue-800"><p className="flex items-center text-white">Cotizar</p></a>
                     </div>
                 </div>
             </div>

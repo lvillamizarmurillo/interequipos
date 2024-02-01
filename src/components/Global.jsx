@@ -27,7 +27,7 @@ function Navegadora() {
         <>
             <div className="flex flex-wrap w-5/5 h-34 bg-blue-950 md:h-20">
                 <div className='flex w-10/12 justify-center md:w-3/12 md:h-full  md:order-1 h-20 order-1'>
-                    <a href="#"><img className='flex w-full h-full m-auto transition-all duration-300 transform hover:scale-105' src={logo} alt="logo" /></a>
+                    <a href="http://localhost:5173/"><img className='flex w-full h-full m-auto transition-all duration-300 transform hover:scale-105' src={logo} alt="logo" /></a>
                 </div>
                 <div className="flex w-full md:w-8/12 md:h-full  md:order-2 h-12 order-3">
                     <div className="flex m-auto  w-10/12 h-3/5 md:w-full md:h-2/5">
@@ -45,21 +45,21 @@ function Navegadora() {
                     <p className='flex ml-1'>MENU</p>
                 </button>
                 <div className="hidden lg:flex w-9/12 bg-gray-230 px-2">
-                    <a href="#" className='flex w-full justify-center items-center h-10 transition-all duration-300 transform hover:scale-95 hover:bg-slate-300'>Inicio</a>
-                    <a href="#" className='flex w-full justify-center items-center h-10 transition-all duration-300 transform hover:scale-95 hover:bg-slate-300'>Productos</a>
-                    <a href="#" className='flex w-full justify-center items-center h-10 transition-all duration-300 transform hover:scale-95 hover:bg-slate-300'>Categorias</a>
+                    <a href="http://localhost:5173/" className='flex w-full justify-center items-center h-10 transition-all duration-300 transform hover:scale-95 hover:bg-slate-300'>Inicio</a>
+                    <a href="http://localhost:5173/productos" className='flex w-full justify-center items-center h-10 transition-all duration-300 transform hover:scale-95 hover:bg-slate-300'>Productos</a>
+                    <a href="http://localhost:5173/productos" className='flex w-full justify-center items-center h-10 transition-all duration-300 transform hover:scale-95 hover:bg-slate-300'>Categorias</a>
                     <a href="#" className='flex w-full justify-center items-center h-10 transition-all duration-300 transform hover:scale-95 hover:bg-slate-300 '>Contactanos</a>
                 </div>
                 <div className="hidden lg:flex w-3/12 bg-gray-200 px-2 justify-end">
-                    <a href="#" className='flex w-16 justify-center items-center h-10 transition-all duration-300 transform hover:scale-105 '><img src={facebook} className='flex h-3/4' alt="facebook" /></a>
-                    <a href="#" className='flex w-16 justify-center items-center h-10 transition-all duration-300 transform hover:scale-105 '><img src={twitter} className='flex h-3/4' alt="twitter" /></a>
-                    <a href="#" className='flex w-16 justify-center items-center h-10 transition-all duration-300 transform hover:scale-105  '><img src={instagram} className='flex h-3/4' alt="instagram" /></a>
+                    <a href="https://www.facebook.com/profile.php?id=100072611583125&mibextid=ZbWKwL" target="_blank" className='flex w-16 justify-center items-center h-10 transition-all duration-300 transform hover:scale-105 '><img src={facebook} className='flex h-3/4' alt="facebook" /></a>
+                    <a href="#" target="_blank" className='flex w-16 justify-center items-center h-10 transition-all duration-300 transform hover:scale-105 '><img src={twitter} className='flex h-3/4' alt="twitter" /></a>
+                    <a href="https://www.instagram.com/Interequiposamerica/" target="_blank" className='flex w-16 justify-center items-center h-10 transition-all duration-300 transform hover:scale-105  '><img src={instagram} className='flex h-3/4' alt="instagram" /></a>
                 </div>
             </div>
             {menuVisible && (
                 <div className="flex flex-col w-full justify-center h-auto items-center mx-auto bg-slate-200">
-                    <a href="#" className='flex w-full justify-center items-center h-10 border-b-2 border-solid border-gray-300 transition-all duration-300 transform hover:scale-105 hover:bg-slate-300'>Inicio</a>
-                    <a href="#" className='flex w-full justify-center items-center h-10 border-b-2 border-solid border-gray-300 transition-all duration-300 transform hover:scale-105 hover:bg-slate-300'>Categorias</a>
+                    <a href="http://localhost:5173/" className='flex w-full justify-center items-center h-10 border-b-2 border-solid border-gray-300 transition-all duration-300 transform hover:scale-105 hover:bg-slate-300'>Inicio</a>
+                    <a href="http://localhost:5173/productos" className='flex w-full justify-center items-center h-10 border-b-2 border-solid border-gray-300 transition-all duration-300 transform hover:scale-105 hover:bg-slate-300'>Categorias</a>
                     <a href="#" className='flex w-full justify-center items-center h-10 border-b-2 border-solid border-gray-300 transition-all duration-300 transform hover:scale-105 hover:bg-slate-300'>Contactanos</a>
                 </div>
             )}
@@ -72,29 +72,29 @@ function FinalPage() {
     return (
         <>
             <div className="flex flex-col md:flex-row w-full bg-blue-950">
-                <div className="flex flex-col m-2 w-full md:2/6 h-68">
+                <div className="flex flex-col my-2 pl-2 w-full md:2/6 h-68">
                     <p className="flex w-full h-10 items-center text-white text-xl border-b border-white">Comunicate con nosotros</p>
-                    <p className="flex mt-4 m-2 text-white"><img src={celular} className='flex w-7 h-7' alt="celular" /> 313 4757734</p>
-                    <p className="flex m-2 text-white"><img src={whatsappBlanco} className='flex w-7 h-7' alt="celular" /> 313 4757734</p>
-                    <p className="flex m-2 text-white"><img src={whatsappBlanco} className='flex w-7 h-7' alt="celular" /> 316 4933049</p>
-                    <p className="flex m-2 text-white"><img src={ubicacion} className='flex w-7 h-7' alt="celular" /> Gratamira Call33#49-12</p>
-                    <p className="flex m-2 text-white"><img src={correo} className='flex w-7 h-7' alt="celular" /> lvillamizarmurillo@gmail.com</p>
+                    <p className="flex mt-4 m-2 text-white"><img src={celular} className='flex w-7 h-7' alt="celular" />(607) 687 9550</p>
+                    <p className="flex m-2 text-white"><img src={whatsappBlanco} className='flex w-7 h-7' alt="celular" />316 493 3049</p>
+                    <p className="flex m-2 text-white"><img src={whatsappBlanco} className='flex w-7 h-7' alt="celular" />317 515 9212</p>
+                    <p className="flex m-2 text-white"><img src={ubicacion} className='flex w-7 h-7' alt="celular" /> Cra. 33 No 48 -109 Oficina 310 C.C. Grtamira</p>
+                    <p className="flex m-2 text-white"><img src={correo} className='flex w-7 h-7' alt="celular" />admon.interequipos@gmail.com</p>
                 </div>
-                <div className="flex flex-col m-2 w-full md:2/6 h-64">
+                <div className="flex flex-col my-2 pl-2 w-full md:2/6 h-64">
                     <p className="flex w-full h-10 items-center text-white text-xl border-b border-white">Busca tu equipo</p>
-                    <a href="#" className='flex ml-4 my-2 mt-4'><p className='flex text-white transition-all duration-300 transform hover:text-slate-500'>Monitores</p></a>
-                    <a href="#" className='flex ml-4 my-2'><p className='flex text-white transition-all duration-300 transform hover:text-slate-500'>Camaras</p></a>
-                    <a href="#" className='flex ml-4 my-2'><p className='flex text-white transition-all duration-300 transform hover:text-slate-500'>Sellos</p></a>
-                    <a href="#" className='flex ml-4 my-2'><p className='flex text-white transition-all duration-300 transform hover:text-slate-500'>Oficina</p></a>
-                    <a href="#" className='flex ml-4 my-2'><p className='flex text-white transition-all duration-300 transform hover:text-slate-500'>Contadores</p></a>
+                    <a href="http://localhost:5173/productos" className='flex ml-4 my-2 mt-4'><p className='flex text-white transition-all duration-300 transform hover:text-slate-500'>Monitores</p></a>
+                    <a href="http://localhost:5173/productos" className='flex ml-4 my-2'><p className='flex text-white transition-all duration-300 transform hover:text-slate-500'>Camaras</p></a>
+                    <a href="http://localhost:5173/productos" className='flex ml-4 my-2'><p className='flex text-white transition-all duration-300 transform hover:text-slate-500'>Sellos</p></a>
+                    <a href="http://localhost:5173/productos" className='flex ml-4 my-2'><p className='flex text-white transition-all duration-300 transform hover:text-slate-500'>Oficina</p></a>
+                    <a href="http://localhost:5173/productos" className='flex ml-4 my-2'><p className='flex text-white transition-all duration-300 transform hover:text-slate-500'>Contadores</p></a>
                 </div>
-                <div className="flex flex-col m-2 w-full md:2/6 h-64">
+                <div className="flex flex-col my-2 pl-2 w-full md:2/6 h-64">
                     <p className="flex w-full h-10 items-center text-white text-xl border-b border-white">Redes sociales</p>
                     <div className="flex w-full h-48">
-                        <div className="flex w-1/4 items-center justify-center"><a href="#"><img src={facebookCalidadBlanco} alt="whatsappCalidadBlanco" className='w-20 h-20 transition-all duration-300 transform hover:scale-105' /></a></div>
-                        <div className="flex w-1/4 items-center justify-center"><a href="#"><img src={whatsappCalidadBlanco} alt="whatsappCalidadBlanco" className='w-20 h-20 transition-all duration-300 transform hover:scale-105' /></a></div>
-                        <div className="flex w-1/4 items-center justify-center"><a href="#"><img src={instagramCalidadBlanco} alt="whatsappCalidadBlanco" className='w-20 h-20 transition-all duration-300 transform hover:scale-105' /></a></div>
-                        <div className="flex w-1/4 items-center justify-center"><a href="#"><img src={twitterCalidadBlanco} alt="whatsappCalidadBlanco" className='w-20 h-20 transition-all duration-300 transform hover:scale-105' /></a></div>
+                        <div className="flex w-1/4 items-center justify-center"><a href="https://www.facebook.com/profile.php?id=100072611583125&mibextid=ZbWKwL" target='_blank'><img src={facebookCalidadBlanco} alt="whatsappCalidadBlanco" className='w-20 h-20 transition-all duration-300 transform hover:scale-105' /></a></div>
+                        <div className="flex w-1/4 items-center justify-center"><a href="https://wa.me/message/4IHEOLNB2UWSE1" target='_blank'><img src={whatsappCalidadBlanco} alt="whatsappCalidadBlanco" className='w-20 h-20 transition-all duration-300 transform hover:scale-105' /></a></div>
+                        <div className="flex w-1/4 items-center justify-center"><a href="https://www.instagram.com/Interequiposamerica/" target='_blank'><img src={instagramCalidadBlanco} alt="whatsappCalidadBlanco" className='w-20 h-20 transition-all duration-300 transform hover:scale-105' /></a></div>
+                        <div className="flex w-1/4 items-center justify-center"><a href="#" target='_blank'><img src={twitterCalidadBlanco} alt="whatsappCalidadBlanco" className='w-20 h-20 transition-all duration-300 transform hover:scale-105' /></a></div>
                     </div>
                 </div>
             </div>
