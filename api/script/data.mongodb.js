@@ -29,7 +29,7 @@ db.product.insertMany([
   {
     name: 'engrapadora',
     category: 'OFICINA',
-    image: {
+    images: {
       path: 'ruta/del/archivo/en/el/servidor/uploads/1234567890-nombre_del_archivo1.jpg',
       link: 'http://tu-subdominio.com/uploads/1234567890-nombre_del_archivo1.jpg',
     },
@@ -43,7 +43,7 @@ db.product.insertMany([
   {
     name: 'engrapadora',
     category: 'SELLOS',
-    image: {
+    images: {
       path: 'ruta/del/archivo/en/el/servidor/uploads/1234567890-nombre_del_archivo2.jpg',
       link: 'http://tu-subdominio.com/uploads/1234567890-nombre_del_archivo2.jpg',
     },
@@ -57,7 +57,7 @@ db.product.insertMany([
   {
     name: 'engrapadora',
     category: 'OFICINA',
-    image: {
+    images: {
       path: 'ruta/del/archivo/en/el/servidor/uploads/1234567890-nombre_del_archivo3.jpg',
       link: 'http://tu-subdominio.com/uploads/1234567890-nombre_del_archivo3.jpg',
     },

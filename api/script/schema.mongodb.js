@@ -19,11 +19,9 @@ db.createCollection('category', {
     validator: {
         $jsonSchema: {
             bsonType: "object",
-            required: ['name', 'path', 'link'],
+            required: ['name'],
             properties: {
-                name: { bsonType: 'string', pattern: "^[A-Z]+$", uniqueItems: true, description: 'Name es obligatorio y debe contener solo letras mayúsculas.' },
-                path: { bsonType: 'string', description: 'Path es obligatorio y debe ser una cadena de caracteres.' },
-                link: { bsonType: 'string', description: 'Link es obligatorio y debe ser una cadena de caracteres.' }
+                name: { bsonType: 'string', pattern: "^[A-Z]+$", uniqueItems: true, description: 'Name es obligatorio y debe contener solo letras mayúsculas.' }
             }
         }
     }
@@ -39,13 +37,10 @@ db.createCollection('product', {
                 name: { bsonType: 'string', description: 'Name es obligatorio y debe ser una cadena de caracteres.' },
                 category: { bsonType: 'string', pattern: "^[A-Z]+$", description: 'Category es obligatorio y debe contener solo letras mayúsculas.' },
                 images: {
-                    bsonType: 'array',
-                    items: {
-                        bsonType: 'object',
+                    bsonType: 'object',
                         properties: {
                             path: { bsonType: 'string', description: 'Path en images es obligatorio y debe ser una cadena de caracteres.' },
                             link: { bsonType: 'string', description: 'Link en images es obligatorio y debe ser una cadena de caracteres.' }
-                        }
                     }
                 },
                 productPdf: {
@@ -73,9 +68,10 @@ db.createCollection('contact', {
                     bsonType: 'object',
                     properties: {
                         facebook: { bsonType: 'string', description: 'Facebook es obligatorio y debe ser una cadena de caracteres.' },
-                        twitter: { bsonType: 'string', description: 'Twitter es obligatorio y debe ser una cadena de caracteres.' },
                         instagram: { bsonType: 'string', description: 'Instagram es obligatorio y debe ser una cadena de caracteres.' },
-                        whatsapp: { bsonType: 'string', pattern: "^[0-9]+$", description: 'WhatsApp es obligatorio y debe contener solo números.' }
+                        whatsapp: { bsonType: 'string', description: 'WhatsApp es obligatorio y debe contener el link de la pagina principal.' },
+                        whatsapp1: { bsonType: 'string', pattern: "^[0-9]+$", description: 'WhatsApp es obligatorio y debe contener solo números.' },
+                        whatsapp2: { bsonType: 'string', pattern: "^[0-9]+$", description: 'WhatsApp es obligatorio y debe contener solo números.' }
                     }
                 }
             }
@@ -96,15 +92,6 @@ db.createCollection('zones', {
                         "^[A-Za-z]+$": {
                             bsonType: 'object',
                             properties: {
-                                emailsContacts: {
-                                    bsonType: 'object',
-                                    properties: {
-                                        oficina: { bsonType: 'string', description: 'Oficina es obligatorio y debe ser una cadena de caracteres.' },
-                                        soporte: { bsonType: 'string', description: 'Soporte es obligatorio y debe ser una cadena de caracteres.' },
-                                        gerencia: { bsonType: 'string', description: 'Gerencia es obligatorio y debe ser una cadena de caracteres.' }
-                                    }
-                                },
-                                numberContact: { bsonType: 'array', items: { bsonType: 'string', description: 'NumberContact debe ser un array que contenga solo cadenas de caracteres.' } },
                                 address: { bsonType: 'array', items: { bsonType: 'string', description: 'Address debe ser un array que contenga solo cadenas de caracteres.' } }
                             }
                         }
