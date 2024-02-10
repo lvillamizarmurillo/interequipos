@@ -2,12 +2,23 @@ import Joi from "joi";
 
 class Validations {
     static registrationSchema = Joi.object({
-      email: Joi.string().email().required(),
-      password: Joi.string().pattern(new RegExp('^[a-zA-Z0-9]{3,30}$')).required(),
+      email: Joi.string().email().required().messages({
+        'string.email': 'El email debe contener un formato valido.',
+        'any.required': 'La contraseña es un campo obligatorio.'
+      }),
+      password: Joi.string().required().messages({
+        'string': 'La password debe contener un formato valido.',
+        'any.required': 'La password es un campo obligatorio.'
+      }),
     });
   
-    static validateRegistration(data) {
-      return Validations.registrationSchema.validate(data);
+    static validateRegistration(data,keyword) {
+      switch (keyword) {
+        case 'loginAdmin':
+          return Validations.registrationSchema.validate(data, { abortEarly: false });
+        default:
+          return Validations.registrationSchema.validate(data, { abortEarly: false });
+      }
     }
 }
 
