@@ -9,8 +9,12 @@ const version = routesVersioning();
 
 router.use(passportHelper.authenticate('bearer', {session: false}));
 
-router.get("/", version({
-    '1.0.0': Admin.getAdminInfo
+router.post("/category", version({
+    '1.0.0': Admin.postCategory
+}));
+
+router.post("/product", version({
+    '1.0.0': Admin.postProduct
 }));
 
 export { router };

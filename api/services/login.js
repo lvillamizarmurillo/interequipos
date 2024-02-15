@@ -1,6 +1,6 @@
 import { collectionGen } from '../config/mongoConnect.js';
 import { generateJWTToken } from '../middleware/jwt.js';
-import Validations from '../controller/storageLogin.js';
+import ValidationsLogin from '../controller/storageLogin.js';
 
 const adminCollection = await collectionGen('admin');
 
@@ -9,9 +9,9 @@ const createToken = async (req, res) => {
 
     const dateAdminLogin = req.body;
 
-    const { error, value } = Validations.validateRegistration(dateAdminLogin,'loginAdmin');
+    const { error } = ValidationsLogin.validateRegistration(dateAdminLogin,'loginAdmin');
 
-    if (error) return res.status(400).send({status:400, messagea:error.details.map(err => err.message).join(', ')});
+    if (error) return res.status(400).send({status:400, message:error.details.map(err => err.message).join(', ')});
 
     const user = await adminCollection.findOne({ email:dateAdminLogin.email, password:dateAdminLogin.password });
 

@@ -21,7 +21,7 @@ db.createCollection('category', {
             bsonType: "object",
             required: ['name'],
             properties: {
-                name: { bsonType: 'string', pattern: "^[A-Z]+$", uniqueItems: true, description: 'Name es obligatorio y debe contener solo letras mayúsculas.' }
+                name: { bsonType: 'string', pattern: "^[A-Z\\s]+$", uniqueItems: true, description: 'Name es obligatorio y debe contener solo letras mayúsculas.' }
             }
         }
     }
@@ -35,7 +35,7 @@ db.createCollection('product', {
             required: ['name', 'category', 'images', 'productPdf', 'info', 'zone'],
             properties: {
                 name: { bsonType: 'string', description: 'Name es obligatorio y debe ser una cadena de caracteres.' },
-                category: { bsonType: 'string', pattern: "^[A-Z]+$", description: 'Category es obligatorio y debe contener solo letras mayúsculas.' },
+                category: { bsonType: 'string', pattern: "^[A-Z\\s]+$", description: 'Category es obligatorio y debe contener solo letras mayúsculas.' },
                 images: {
                     bsonType: 'object',
                         properties: {
