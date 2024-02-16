@@ -19,32 +19,14 @@ class ValidationsAdmin {
           'string.pattern.base': 'El nombre de la categoria debe contener solo mayúsculas.',
           'any.required': 'El nombre de la categoria es un campo obligatorio, verifica el campo category.'
         }),
-        images: Joi.object({
-            path: Joi.string().required().messages({
-                'string': 'El path debe contener un formato valido.',
-                'any.required': 'El path es un campo obligatorio, verifica el campo path.'
-            }),
-            link: Joi.string().required().messages({
-                'string': 'El link debe contener un formato valido.',
-                'any.required': 'El link es un campo obligatorio, verifica el campo link.'
-            })
-        }).required().messages({
-            'object': 'El campo images debe contener un formato valido.',
-            'any.required': 'El campo de imagenes es obligatorio, verifica el campo images.'
-        }),
-        productPdf: Joi.object({
-            path: Joi.string().required().messages({
-                'string': 'El path debe contener un formato valido.',
-                'any.required': 'El path es un campo obligatorio, verifica el campo path.'
-            }),
-            link: Joi.string().required().messages({
-                'string': 'El link debe contener un formato valido.',
-                'any.required': 'El link es un campo obligatorio, verifica el campo link.'
-            })
-        }).required().messages({
-            'object': 'El campo productPdf debe contener un formato valido.',
-            'any.required': 'El campo de SubirPDF es obligatorio, verifica el campo productPdf.'
-        }),
+        image: Joi.string().required().messages({
+            'string': 'El nombre de la image debe contener un formato valido.',
+            'any.required': 'El nombre de la imagen es un campo obligatorio, verifica el campo image.'
+          }),
+        productPdf: Joi.string().required().messages({
+            'string': 'El nombre de productPdf debe contener un formato valido.',
+            'any.required': 'El nombre del pdf es un campo obligatorio, verifica el campo productPdf.'
+          }),
         info: Joi.string().required().messages({
             'string': 'La info debe contener un formato valido.',
             'any.required': 'La info es un campo obligatorio, verifica el campo info.'

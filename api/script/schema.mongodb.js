@@ -32,24 +32,12 @@ db.createCollection('product', {
     validator: {
         $jsonSchema: {
             bsonType: "object",
-            required: ['name', 'category', 'images', 'productPdf', 'info', 'zone'],
+            required: ['name', 'category', 'image', 'productPdf', 'info', 'zone'],
             properties: {
-                name: { bsonType: 'string', description: 'Name es obligatorio y debe ser una cadena de caracteres.' },
+                name: { bsonType: 'string', pattern: "^[A-Z\\s]+$", description: 'Name es obligatorio y debe ser una cadena de caracteres.' },
                 category: { bsonType: 'string', pattern: "^[A-Z\\s]+$", description: 'Category es obligatorio y debe contener solo letras mayúsculas.' },
-                images: {
-                    bsonType: 'object',
-                        properties: {
-                            path: { bsonType: 'string', description: 'Path en images es obligatorio y debe ser una cadena de caracteres.' },
-                            link: { bsonType: 'string', description: 'Link en images es obligatorio y debe ser una cadena de caracteres.' }
-                    }
-                },
-                productPdf: {
-                    bsonType: 'object',
-                    properties: {
-                        path: { bsonType: 'string', description: 'Path en productPdf es obligatorio y debe ser una cadena de caracteres.' },
-                        link: { bsonType: 'string', description: 'Link en productPdf es obligatorio y debe ser una cadena de caracteres.' }
-                    }
-                },
+                image: { bsonType: 'string', description: 'Image es obligatorio y debe contener un link.' },
+                productPdf: { bsonType: 'string', description: 'ProductPdf es obligatorio y debe contener un link.' },
                 info: { bsonType: 'string', description: 'Info es obligatorio y debe ser una cadena de caracteres.' },
                 zone: { bsonType: 'string', pattern: "^[A-Z][a-z]+$", description: 'Zone es obligatorio y debe ser una cadena de caracteres con la primera letra en mayúscula y el resto en minúscula.' }
             }
@@ -84,19 +72,10 @@ db.createCollection('zones', {
     validator: {
         $jsonSchema: {
             bsonType: "object",
-            required: ['zone'],
+            required: ['name','address'],
             properties: {
-                zone: {
-                    bsonType: 'object',
-                    patternProperties: {
-                        "^[A-Za-z]+$": {
-                            bsonType: 'object',
-                            properties: {
-                                address: { bsonType: 'array', items: { bsonType: 'string', description: 'Address debe ser un array que contenga solo cadenas de caracteres.' } }
-                            }
-                        }
-                    }
-                }
+                name: { bsonType: 'string', pattern: "^[A-Z][a-z]+$", uniqueItems: true, description: 'Zone es obligatorio y debe ser una cadena de caracteres con la primera letra en mayúscula y el resto en minúscula.' },
+                address: { bsonType: 'array', items: { bsonType: 'string', description: 'Address debe ser un array que contenga solo cadenas de caracteres.' } }
             }
         }
     }

@@ -27,44 +27,26 @@ db.category.insertMany([
 use('intereqiposdb');
 db.product.insertMany([
   {
-    name: 'engrapadora',
+    name: 'ENGRAPADORAUNO',
     category: 'OFICINA',
-    images: {
-      path: 'ruta/del/archivo/en/el/servidor/uploads/1234567890-nombre_del_archivo1.jpg',
-      link: 'http://tu-subdominio.com/uploads/1234567890-nombre_del_archivo1.jpg',
-    },
-    productPdf: {
-      path: "ruta/del/archivo/en/el/servidor/uploads/1234567890-documento_ejemplo.pdf",
-      link: "http://tu-subdominio.com/uploads/1234567890-documento_ejemplo.pdf"
-    },
+    image: 'ruta/del/archivo/en/el/servidor/uploads/1234567890-nombre_del_archivo1.jpg',
+    productPdf: 'ruta/del/archivo/en/el/servidor/uploads/1234567890-documento_ejemplo.pdf',
     info: 'info del producto 1',
     zone: 'Bucaramanga'
   },
   {
-    name: 'engrapadora',
+    name: 'ENGRAPADORADOS',
     category: 'SELLOS',
-    images: {
-      path: 'ruta/del/archivo/en/el/servidor/uploads/1234567890-nombre_del_archivo2.jpg',
-      link: 'http://tu-subdominio.com/uploads/1234567890-nombre_del_archivo2.jpg',
-    },
-    productPdf: {
-      path: "ruta/del/archivo/en/el/servidor/uploads/1234567890-documento_ejemplo.pdf",
-      link: "http://tu-subdominio.com/uploads/1234567890-documento_ejemplo.pdf"
-    },
+    image: 'ruta/del/archivo/en/el/servidor/uploads/1234567890-nombre_del_archivo2.jpg',
+    productPdf: 'ruta/del/archivo/en/el/servidor/uploads/1234567890-documento_ejemplo2.pdf',
     info: 'info del producto 2',
     zone: 'Bucaramanga'
   },
   {
-    name: 'engrapadora',
+    name: 'ENGRAPADORATRES',
     category: 'OFICINA',
-    images: {
-      path: 'ruta/del/archivo/en/el/servidor/uploads/1234567890-nombre_del_archivo3.jpg',
-      link: 'http://tu-subdominio.com/uploads/1234567890-nombre_del_archivo3.jpg',
-    },
-    productPdf: {
-      path: "ruta/del/archivo/en/el/servidor/uploads/1234567890-documento_ejemplo.pdf",
-      link: "http://tu-subdominio.com/uploads/1234567890-documento_ejemplo.pdf"
-    },
+    image: 'ruta/del/archivo/en/el/servidor/uploads/1234567890-nombre_del_archivo3.jpg',
+    productPdf: 'ruta/del/archivo/en/el/servidor/uploads/1234567890-documento_ejemplo3.pdf',
     info: 'info del producto 3',
     zone: 'Cali'
   }
@@ -86,17 +68,11 @@ db.contact.insertMany([
 use('intereqiposdb');
 db.zones.insertMany([
   {
-    zone: {
-      Bucaramanga: {
-        address: ['Cr. 27 # 36-38 - Int 121, Bucaramanga / Santander','La cumbre'],
-      }
-    }
+    name: 'Bucaramanga',
+    address: ['Cr. 27 # 36-38 - Int 121, Bucaramanga / Santander'],
   },
   {
-    zone: {
-      Cali: {
-        address: ['Cr. 27 # 36-38 - Int 121, Cali / Santander'],
-      }
-    }
+    name: 'Cali',
+    address: ['Cr. 27 # 36-38 - Int 121, Cali / Santander'],
   }
 ]);
